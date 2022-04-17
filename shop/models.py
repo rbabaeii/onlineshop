@@ -8,7 +8,7 @@ class Food(models.Model):
     name = models.CharField(max_length=100 , null= True , blank= True)
     price = models.FloatField(max_length= 20)
     description = models.TextField(max_length=100 , null= False , blank=False)
-    image = models.ImageField()
+    image = models.ImageField(upload_to ="foods")
     def __str__(self) -> str:
         return self.name
 class New_order(models.Model):
